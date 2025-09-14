@@ -1,0 +1,11 @@
+stages:
+  train:
+    cmd: python src/train.py
+    deps:
+    - data/titanic.csv
+    - src/train.py
+    outs:
+    - models/titanic_logistic_regression_model.pkl
+    metrics:
+    - metrics_logistic_regression.json:
+        cache: false
