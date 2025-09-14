@@ -1,0 +1,5 @@
+outs:
+- md5: 95bf50bf48fed6ce7cb4d2f5e17af44d
+  size: 65484
+  hash: md5
+  path: titanic_drifted.csv
