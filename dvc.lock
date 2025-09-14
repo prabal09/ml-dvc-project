@@ -3,11 +3,10 @@ stages:
   train:
     cmd: python src/train.py
     deps:
-    - path: data/titanic.csv
+    - path: data/titanic_drifted.csv
       hash: md5
-      md5: 61fdd54abdbf6a85b778e937122e1194
-      size: 60302
-      isexec: true
+      md5: 95bf50bf48fed6ce7cb4d2f5e17af44d
+      size: 65484
     - path: src/train.py
       hash: md5
       md5: 60348204e9d1eeb1ba2c5fe69a72a9af
