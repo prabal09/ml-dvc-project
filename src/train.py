@@ -1,7 +1,7 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import accuracy_score
+from sklearn.metrics import accuracy_score, f1_score
 
 # Load the dataset
 # You'll need to have the titanic.csv file in the same directory or specify the correct path
@@ -33,9 +33,19 @@ y_pred = model.predict(X_test)
 accuracy = accuracy_score(y_test, y_pred)
 print(f"Accuracy: {accuracy}")
 
+f1 = f1_score(y_test, y_pred)
+print(f"F1 Score: {f1}")
+
 # You can also use other evaluation metrics like confusion matrix and classification report
 from sklearn.metrics import confusion_matrix, classification_report
 print("Confusion Matrix:")
 print(confusion_matrix(y_test, y_pred))
 print("\nClassification Report:")
 print(classification_report(y_test, y_pred))
+
+# Save the model and metrics
+joblib.dump(model, 'models/titanic_logistic_regression_model.pkl')
+with open('metrics_logistic_regression.json', 'w') as f:
+    json.dump({'accuracy': accuracy, 'f1_score': f1}, f)
+
+print(f"Model trained. Accuracy: {accuracy:.2f}, F1-score: {f1:.2f}")
