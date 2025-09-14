@@ -1,0 +1,23 @@
+schema: '2.0'
+stages:
+  train:
+    cmd: python src/train.py
+    deps:
+    - path: data/titanic.csv
+      hash: md5
+      md5: 61fdd54abdbf6a85b778e937122e1194
+      size: 60302
+      isexec: true
+    - path: src/train.py
+      hash: md5
+      md5: 60348204e9d1eeb1ba2c5fe69a72a9af
+      size: 1963
+    outs:
+    - path: metrics_logistic_regression.json
+      hash: md5
+      md5: 921513b6949aaf0bacc4267ddbd01cb6
+      size: 50
+    - path: models/titanic_logistic_regression_model.pkl
+      hash: md5
+      md5: 00f206b1fa4c68ac2a88fbdda8fc5eb5
+      size: 1247
