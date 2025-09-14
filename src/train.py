@@ -3,6 +3,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, f1_score
 import joblib
+import json
+
 # Load the dataset
 # You'll need to have the titanic.csv file in the same directory or specify the correct path
 titanic = pd.read_csv('data/titanic.csv')
