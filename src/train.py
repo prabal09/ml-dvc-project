@@ -7,7 +7,7 @@ import json
 
 # Load the dataset
 # You'll need to have the titanic.csv file in the same directory or specify the correct path
-titanic = pd.read_csv('data/titanic.csv')
+titanic = pd.read_csv('data/titanic_drifted.csv')
 
 # Data Cleaning and Preparation (basic example)
 # Handle missing values (e.g., fill 'Age' with the mean, drop 'Cabin')
