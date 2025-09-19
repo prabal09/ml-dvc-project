@@ -2,7 +2,7 @@ stages:
   train:
     cmd: python src/train.py
     deps:
-    - data/titanic.csv
+    - data/titanic_drifted.csv
     - src/train.py
     outs:
     - models/titanic_logistic_regression_model.pkl
