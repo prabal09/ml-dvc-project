@@ -5,18 +5,18 @@ stages:
     deps:
     - path: data/titanic_drifted.csv
       hash: md5
-      md5: f122a24c8e7bcb55c0b54b903febdbe3
-      size: 67086
+      md5: 07cc6dcabddedc4c56fda27a1d7386ee
+      size: 63322
     - path: src/train.py
       hash: md5
-      md5: 60348204e9d1eeb1ba2c5fe69a72a9af
-      size: 1963
+      md5: 328562632ac6da5d43af1df5e918dd9f
+      size: 1971
     outs:
     - path: metrics_logistic_regression.json
       hash: md5
-      md5: 921513b6949aaf0bacc4267ddbd01cb6
-      size: 50
+      md5: 00d8af433bf540e9e6871aa20e736c24
+      size: 64
     - path: models/titanic_logistic_regression_model.pkl
       hash: md5
-      md5: 00f206b1fa4c68ac2a88fbdda8fc5eb5
+      md5: 2f905ca8cf08f52eec5c7a6beda7c8e8
       size: 1247
